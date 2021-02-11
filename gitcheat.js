@@ -10,7 +10,7 @@ const addFunc = () => {
             console.log(`stderr: ${stderr}`);
 
         }
-        console.log(`stdout: ${stdout}`);
+        console.log(`stdout: ${stdout}`); 
 
     })
 }
