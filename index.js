@@ -1,5 +1,5 @@
 const {exec} = require("child_process")
-
+var poop = "poop"
 const gitPush = (interval) => {
     exec(`node gitcheat.js ${interval}`, (error , stdout, stderr)=>{
         if (error) {
