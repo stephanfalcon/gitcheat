@@ -46,7 +46,7 @@ var cmdStack = async () =>{
     })
 }
 
-const Timer = () => {
+const Timer = async () => {
     let seconds = 0
     let interval = 0 
     // setTimeout(()=>{
@@ -54,9 +54,9 @@ const Timer = () => {
         //     cmd.exec('git commit -m "uploaded from with cmd"')
         //     cmd.exec('git push')
         // },10)
-        addFunc()
-        commitFunc()
-        pushFunc()
+        await addFunc()
+        await commitFunc()
+        await pushFunc()
     }
 
     Timer()
