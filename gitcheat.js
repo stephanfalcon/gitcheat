@@ -25,7 +25,7 @@ const addFunc = () => {
 const commitFunc = () => {
     try {
         fs.unlinkSync(path)
-        //file removed
+
       } catch(err) {
       }
     return new Promise((resolve,reject)=>{
