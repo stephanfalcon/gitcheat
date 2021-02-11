@@ -4,6 +4,10 @@ const fs = require('fs')
 
 const path = './.git/index.lock'
 
+var d = new Date();
+var n = d.toString();
+
+
 const addFunc = () => {
     return new Promise((resolve,reject)=>{
         exec("git add .",(error, stdout,stderr)=>{
@@ -29,7 +33,7 @@ const commitFunc = () => {
       } catch(err) {
       }
     return new Promise((resolve,reject)=>{
-                exec(`git commit -m "submitted with gitcheat; interval: ${process.argv[2]}"`,(error, stdout,stderr)=>{
+                exec(`git commit -m "submitted with gitcheat; interval: ${n}"`,(error, stdout,stderr)=>{
             if (error) {
                 console.log(`error: ${error.message}`);
                 reject()
