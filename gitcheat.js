@@ -17,11 +17,12 @@ const addFunc = () => {
             }
             if (stderr) {
                 console.log(`add stderr: ${stderr}`);
-                
-                resolve()
             }
-            console.log(`add stdout: ${stdout}`);
-            resolve()
+            setTimeout(()=>{
+                console.log(`add stdout: ${stdout}`);
+                resolve()
+            },250)
+
         })
     })
 }
@@ -42,8 +43,10 @@ const commitFunc = () => {
                 console.log(`commit stderr: ${stderr}`);
                 return resolve()
             }
-            console.log(`commit stdout: ${stdout}`);
-            return resolve()
+            setTimeout(()=>{
+                console.log(`commit stdout: ${stdout}`);
+                resolve()
+            },250)
         }) 
     })
 }
@@ -64,8 +67,10 @@ const pushFunc = () => {
                 console.log(`push stderr: ${stderr}`);
                 return resolve()
             }
-            console.log(`push stdout: ${stdout}`);
-            return resolve()
+            setTimeout(()=>{
+                console.log(`push stdout: ${stdout}`);
+                resolve()
+            },250)
         })
     })
 }
