@@ -28,16 +28,15 @@ const addFunc = () => {
 }
 
 const commitFunc = () => {
-    try {
-        fs.unlinkSync(path)
 
-      } catch(err) {
-      }
     return new Promise((resolve,reject)=>{
                 exec(`git commit -m "submitted with gitcheat; interval: ${n}"`,(error, stdout,stderr)=>{
             if (error) {
-                console.log(`commit error: ${error.message}`);
-                return reject()
+                try {
+                    fs.unlinkSync(path)
+
+                } catch(err) {
+                }
             }
             if (stderr) {
                 console.log(`commit stderr: ${stderr}`);
