@@ -4,7 +4,8 @@ const Timer = () => {
     let seconds = 0
     let interval = 0 
 
-        shell.exec("upload.bat")
+        shell.exec("git add .")
+        shell.exec("git commit -m 'message'")
 }
 
 Timer()
