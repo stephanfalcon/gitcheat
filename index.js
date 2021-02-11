@@ -2,7 +2,7 @@ var shell = require("shelljs")
 var {exec} = require("child_process")
 
 
-var addFunc = () => {
+var addFunc = async () => {
     exec('git add .', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
@@ -13,8 +13,8 @@ var addFunc = () => {
     });
 }
 
-var commitFunc = () => {
-    exec('git commit -m "submitted with child process', (error, stdout, stderr) => {
+var commitFunc = async () => {
+    await exec('git commit -m "submitted with child process', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
             return;
@@ -24,8 +24,8 @@ var commitFunc = () => {
     });
 }
 
-var pushFunc = () => {
-    exec('git push', (error, stdout, stderr) => {
+var pushFunc = async () => {
+    await exec('git push', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
             return;
@@ -33,6 +33,17 @@ var pushFunc = () => {
         console.log(`stdout: ${stdout}`);
         console.error(`stderr: ${stderr}`);
     });
+}
+
+var cmdStack = async () =>{
+    await exec('git push', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+    })
 }
 
 const Timer = () => {
