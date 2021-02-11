@@ -24,7 +24,7 @@ exec('git commit -m "submitted with gitcheat"',(error, stdout,stderr)=>{
     console.log(`stdout: ${stdout}`);
 })
 
-exec("git git push",(error, stdout,stderr)=>{
+exec("git push",(error, stdout,stderr)=>{
     if (error) {
         console.log(`error: ${error.message}`);
         return;
