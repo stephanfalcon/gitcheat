@@ -4,7 +4,7 @@ const Timer = () => {
     let seconds = 0
     let interval = 0 
 
-        exec("start ./upload.bat", (error, stdout, stderr) => {
+        exec("start upload.bat", (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return;
