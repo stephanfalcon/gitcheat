@@ -13,7 +13,7 @@ const addFunc = () => {
         exec("git add .",(error, stdout,stderr)=>{
             if (error) {
                 console.log(`add error: ${error.message}`);
-                reject()
+                reject(error.message)
             }
             if (stderr) {
                 console.log(`add stderr: ${stderr}`);
@@ -36,14 +36,14 @@ const commitFunc = () => {
                 exec(`git commit -m "submitted with gitcheat; interval: ${n}"`,(error, stdout,stderr)=>{
             if (error) {
                 console.log(`commit error: ${error.message}`);
-                reject()
+                return reject()
             }
             if (stderr) {
                 console.log(`commit stderr: ${stderr}`);
-                resolve()
+                return resolve()
             }
             console.log(`commit stdout: ${stdout}`);
-            resolve()
+            return resolve()
         }) 
     })
 }
@@ -53,14 +53,14 @@ const pushFunc = () => {
         exec(`git push`,(error, stdout,stderr)=>{
             if (error) {
                 console.log(`push error: ${error.message}`);
-                reject()
+                return reject(error)
             }
             if (stderr) {
                 console.log(`push stderr: ${stderr}`);
-                resolve()
+                return resolve()
             }
             console.log(`push stdout: ${stdout}`);
-            resolve()
+            return resolve()
         })
     })
 }
