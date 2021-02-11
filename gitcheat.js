@@ -3,9 +3,6 @@ const {exec} = require("child_process")
 const fs = require('fs')
 
 const path = './.git/index.lock'
- 
-const pooop= "poop"
-
 
 const addFunc = () => {
     return new Promise((resolve,reject)=>{
@@ -15,7 +12,7 @@ const addFunc = () => {
                 reject()
             }
             if (stderr) {
-                console.log(`stderr: ${stderr}`);
+                console.log(`add stderr: ${stderr}`);
                 
                 resolve()
             }
@@ -39,7 +36,7 @@ const commitFunc = () => {
                 reject()
             }
             if (stderr) {
-                console.log(`stderr: ${stderr}`);
+                console.log(`commit stderr: ${stderr}`);
                 resolve()
             }
             console.log(`stdout: ${stdout}`);
@@ -56,7 +53,7 @@ const pushFunc = () => {
                 reject()
             }
             if (stderr) {
-                console.log(`stderr: ${stderr}`);
+                console.log(`push stderr: ${stderr}`);
                 resolve()
             }
             console.log(`stdout: ${stdout}`);
