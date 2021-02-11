@@ -27,7 +27,6 @@ const commitFunc = () => {
         fs.unlinkSync(path)
         //file removed
       } catch(err) {
-        console.error(err)
       }
     return new Promise((resolve,reject)=>{
                 exec(`git commit -m "submitted with gitcheat; interval: ${process.argv[2]}"`,(error, stdout,stderr)=>{
