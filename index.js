@@ -5,7 +5,7 @@ const Timer = () => {
     let interval = 0 
 
         shell.exec("git add .")
-        shell.exec("git commit -m 'message'")
+        shell.exec('git commit -m "uploaded from javascript"')
 }
 
 Timer()
