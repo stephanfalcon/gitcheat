@@ -1,5 +1,12 @@
 const {exec} = require("child_process")
 
+const fs = require('fs')
+
+const path = './file.txt'
+
+
+
+
 const addFunc = () => {
     return new Promise((resolve,reject)=>{
         exec("git add .",(error, stdout,stderr)=>{
@@ -9,6 +16,7 @@ const addFunc = () => {
             }
             if (stderr) {
                 console.log(`stderr: ${stderr}`);
+                
                 resolve()
             }
             console.log(`stdout: ${stdout}`);
@@ -18,6 +26,12 @@ const addFunc = () => {
 }
 
 const commitFunc = () => {
+    try {
+        fs.unlinkSync(path)
+        //file removed
+      } catch(err) {
+        console.error(err)
+      }
     return new Promise((resolve,reject)=>{
                 exec(`git commit -m "submitted with gitcheat; interval: ${process.argv[2]}"`,(error, stdout,stderr)=>{
             if (error) {
@@ -30,7 +44,7 @@ const commitFunc = () => {
             }
             console.log(`stdout: ${stdout}`);
             resolve()
-        })
+        }) 
     })
 }
 
