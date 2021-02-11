@@ -40,7 +40,6 @@ const commitFunc = () => {
             }
             if (stderr) {
                 console.log(`commit stderr: ${stderr}`);
-                return resolve()
             }
             setTimeout(()=>{
                 console.log(`commit stdout: ${stdout}`);
