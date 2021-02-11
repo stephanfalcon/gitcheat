@@ -49,6 +49,11 @@ const commitFunc = () => {
 }
 
 const pushFunc = () => {
+    try {
+        fs.unlinkSync(path)
+
+      } catch(err) {
+      }
     return new Promise((resolve,reject)=>{
         exec(`git push`,(error, stdout,stderr)=>{
             if (error) {
