@@ -1,0 +1,22 @@
+{
+  "name": "gitcheat",
+  "version": "1.0.0",
+  "description": "this is an app that will run periodic updates for git and will buff up your git hub pushes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephanfalcon/gitcheat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephanfalcon/gitcheat/issues"
+  },
+  "homepage": "https://github.com/stephanfalcon/gitcheat#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
