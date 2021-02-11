@@ -3,47 +3,19 @@ var {exec} = require("child_process")
 
 
 var addFunc = async () => {
-    exec('git add .', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
-    });
+    exec('git add .');
 }
 
 var commitFunc = async () => {
-    await exec('git commit -m "submitted with child process', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
-    });
+    await exec('git commit -m "submitted with child process 439');
 }
 
 var pushFunc = async () => {
-    await exec('git push', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
-    });
+    await exec('git push');
 }
 
 var cmdStack = async () =>{
-    await exec('git push', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
-    })
+    await exec('git push')
 }
 
 const Timer = async () => {
