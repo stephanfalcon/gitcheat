@@ -12,7 +12,7 @@ const addFunc = () => {
     return new Promise((resolve,reject)=>{
         exec("git add .",(error, stdout,stderr)=>{
             if (error) {
-                console.log(`error: ${error.message}`);
+                console.log(`add error: ${error.message}`);
                 reject()
             }
             if (stderr) {
@@ -20,7 +20,7 @@ const addFunc = () => {
                 
                 resolve()
             }
-            console.log(`stdout: ${stdout}`);
+            console.log(`add stdout: ${stdout}`);
             resolve()
         })
     })
@@ -35,14 +35,14 @@ const commitFunc = () => {
     return new Promise((resolve,reject)=>{
                 exec(`git commit -m "submitted with gitcheat; interval: ${n}"`,(error, stdout,stderr)=>{
             if (error) {
-                console.log(`error: ${error.message}`);
+                console.log(`commit error: ${error.message}`);
                 reject()
             }
             if (stderr) {
                 console.log(`commit stderr: ${stderr}`);
                 resolve()
             }
-            console.log(`stdout: ${stdout}`);
+            console.log(`commit stdout: ${stdout}`);
             resolve()
         }) 
     })
@@ -52,14 +52,14 @@ const pushFunc = () => {
     return new Promise((resolve,reject)=>{
         exec(`git push`,(error, stdout,stderr)=>{
             if (error) {
-                console.log(`error: ${error.message}`);
+                console.log(`push error: ${error.message}`);
                 reject()
             }
             if (stderr) {
                 console.log(`push stderr: ${stderr}`);
                 resolve()
             }
-            console.log(`stdout: ${stdout}`);
+            console.log(`push stdout: ${stdout}`);
             resolve()
         })
     })
