@@ -23,6 +23,7 @@ const Timer = async () => {
     let seconds = 0
     let interval = 0 
     setTimeout(()=>{
+            shell.exec("cd ..")
             shell.exec("git add .")
             shell.exec('git commit -m "uploaded from with cmd"')
             shell.exec('git push')
