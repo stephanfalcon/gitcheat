@@ -1,1 +1,3 @@
-node index.js 
+node %~dp0index.js
+
+pause
