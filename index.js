@@ -24,6 +24,7 @@ const Timer = (interval=process.argv[2]) => {
     setInterval(()=>{
             // shell.cd("..")
             let now = new Time()
+            console.log(now.values.time)
             if(now.values.seconds == interval){
                 shell.exec("git add .")
                 shell.exec(`git commit -m "sent from gitcheat at: ${now.values.time}"`)
