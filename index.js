@@ -18,22 +18,31 @@ const Time = require("./time.js")
 //     await exec('git push')
 // }
 
-let time = new Time()
 
-console.log(time.hours)
-
-const Timer = async () => {
+const Timer = (interval=process.argv[2]) => {
     let seconds = 0
-    let interval = 0 
-    setTimeout(()=>{
+    setInterval(()=>{
             // shell.cd("..")
-            shell.exec("git add .")
-            shell.exec('git commit -m "uploaded from with cmd"')
-            shell.exec('git push')
-        },10)
+            let now = new Time()
+            if(now.values.time == interval){
+                shell.exec("git add .")
+                shell.exec('git commit -m "uploaded from with cmd"')
+                shell.exec('git push')
+            }
+
+        },1000)
         // await addFunc()
         // await commitFunc()
         // await pushFunc()
     }
 
-    Timer()
+    // Timer()
+
+const testTimer = () =>{
+
+    setInterval(()=>{
+        let now = new Time()
+        console.log(now.values.time)
+    },1000)
+}
+Timer()
