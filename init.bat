@@ -1,3 +1,3 @@
-node %~dp0index.js 8:49:30pm
+node %~dp0index.js 0
 
 pause
