@@ -1,6 +1,6 @@
 var shell = require("shelljs")
 var {exec} = require("child_process")
-
+const time = require("time")
 
 // var addFunc = async () => {
 //     exec('git add .');
