@@ -53,4 +53,4 @@ class Time {
     }
 }
 
-export default Time
+module.exports = Time

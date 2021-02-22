@@ -1,6 +1,6 @@
 var shell = require("shelljs")
 var {exec} = require("child_process")
-
+const Time = require("./time.js")
 
 // var addFunc = async () => {
 //     exec('git add .');
@@ -18,6 +18,9 @@ var {exec} = require("child_process")
 //     await exec('git push')
 // }
 
+let time = new Time()
+
+console.log(time.hours)
 
 const Timer = async () => {
     let seconds = 0
