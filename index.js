@@ -6,7 +6,7 @@ const writer = require("./jsonWriter")
 const Timer = (interval = process.argv[2]) => {
     let seconds = 0
     setInterval(()=>{
-            // shell.cd("..")
+
         writer()
         let now = new Time()
         console.log(now.values.minutes)
