@@ -1,3 +1,3 @@
-node %~dp0index.js 21
+node %~dp0index.js 0:0
 
 pause

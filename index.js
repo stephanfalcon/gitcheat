@@ -8,8 +8,8 @@ const Timer = (interval = process.argv[2]) => {
     let main = setInterval(()=>{
 
         let now = new Time()
-        console.log(now.values.minutes)
-        if(now.values.minutes == interval){
+        console.log(now.values.everyHour)
+        if(now.values.everyHour == interval){
             writer()
             shell.exec("git add .")
             shell.exec(`git commit -m "sent from gitcheat at: ${now.values.time}"`)

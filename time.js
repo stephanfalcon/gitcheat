@@ -54,6 +54,7 @@ class Time {
             hours:this.hours,
             minutes:this.minutes,
             seconds:this.seconds,
+            everyHour:`${this.minutes}:${this.seconds}`,
             meridiem:this.meridiem,
             time:`${this.hours}:${this.minutes}:${this.seconds}${this.meridiem}`
         }
