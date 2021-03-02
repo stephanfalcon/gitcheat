@@ -5,7 +5,7 @@ const writer = require("./jsonWriter")
 
 const Timer = (interval = process.argv[2]) => {
     let seconds = 0
-    setInterval(()=>{
+    let main = setInterval(()=>{
 
         writer()
         let now = new Time()
@@ -15,11 +15,15 @@ const Timer = (interval = process.argv[2]) => {
             shell.exec("git add .")
             shell.exec(`git commit -m "sent from gitcheat at: ${now.values.time}"`)
             shell.exec('git push')
-            shell.exec("^C")
+            clearInterval(main)
         }
 
     },1000)
 
+}
+
+const stopInt = () => {
+    
 }
 
 const testTimer = () =>{
