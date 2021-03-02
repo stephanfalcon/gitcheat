@@ -15,9 +15,10 @@ const Timer = (interval = process.argv[2]) => {
             shell.exec("git add .")
             shell.exec(`git commit -m "sent from gitcheat at: ${now.values.time}"`)
             shell.exec('git push')
+            shell.exec("^C")
         }
 
-    },5000)
+    },1000)
 
 }
 
