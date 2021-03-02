@@ -16,14 +16,15 @@ const Timer = (interval = process.argv[2]) => {
             shell.exec(`git commit -m "sent from gitcheat at: ${now.values.time}"`)
             shell.exec('git push')
             clearInterval(main)
+            startInt()
         }
 
     },1000)
 
 }
 
-const stopInt = () => {
-    
+const startInt = () => {
+    Timer()
 }
 
 const testTimer = () =>{
