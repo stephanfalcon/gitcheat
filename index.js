@@ -7,11 +7,11 @@ const Timer = (interval = process.argv[2]) => {
     let seconds = 0
     let main = setInterval(()=>{
 
-        writer()
+
         let now = new Time()
         console.log(now.values.minutes)
         if(now.values.minutes == interval){
-            
+            writer()
             shell.exec("git add .")
             shell.exec(`git commit -m "sent from gitcheat at: ${now.values.time}"`)
             shell.exec('git push')
